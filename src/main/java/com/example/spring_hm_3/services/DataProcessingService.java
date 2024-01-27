@@ -25,13 +25,12 @@ public class DataProcessingService {
    * @param user
    * @return
    */
-  public boolean tryRegistrate(User user) {
+  public boolean checkUser(User user) {
     if (!ifExists(user)) {
       usersRepository.add(user);
       notificationService.userAdded(user);
       return true;
     } else {
-      notificationService.userAdded(null);
       return false;
     }
   }

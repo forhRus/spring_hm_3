@@ -33,7 +33,7 @@ public class RegistrationService {
     User user = userService.createUser(name, age, email); // создаём объект пользователя
 
     // пробуем добавить, выводим в консоль результат
-    String notification = notificationService.resultRegistration(user, dataProcessingService.tryRegistrate(user));
+    String notification = notificationService.resultRegistration(user, dataProcessingService.checkUser(user));
     return notification;
   }
 

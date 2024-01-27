@@ -45,5 +45,4 @@ public class TasksController {
   public double calculateAverageAge() {
     return dataProcessingService.calculateAverageAge(dataProcessingService.getUsersFromDB());
   }
-
 }
